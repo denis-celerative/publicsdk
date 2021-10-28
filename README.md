@@ -1,4 +1,4 @@
-# Public SDK repo (repo 2)
+# Public SDK (repo 2)
 
 Import the private sdk as arr and expose its functionallity
 
