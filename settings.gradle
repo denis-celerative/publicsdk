@@ -7,5 +7,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "publicsdk"
-include ':app'
+//include ':app'
 include ':publicspikesdk'
