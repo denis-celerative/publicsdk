@@ -1,7 +1,11 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
+//    id 'com.github.dcendents.android-maven'
 }
+
+group = 'com.github.denis-celerative'
 
 android {
     compileSdkVersion 30
@@ -28,6 +32,41 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+}
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            pom {
+                name = 'Public sdk'
+                description = 'Spyke to test public sdk'
+                url = 'https://github.com/denis-celerative/publicsdk'
+                properties = [
+                        spikeProp: "spyke value",
+                        "spyke.prop.with.dots": "anotherValue spike"
+                ]
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'johnd'
+                        name = 'John Doe'
+                        email = 'john.doe@example.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/denis-celerative/publicsdk'
+                    developerConnection = 'scm:git:ssh://github.com/denis-celerative/publicsdk.git'
+                    url = 'https://github.com/denis-celerative/publicsdk/'
+                }
+            }
+        }
     }
 }
 
