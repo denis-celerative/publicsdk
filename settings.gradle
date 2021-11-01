@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "publicsdk"
 include ':app'
+include ':publicspikesdk'
