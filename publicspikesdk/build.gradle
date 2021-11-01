@@ -13,8 +13,8 @@ android {
     defaultConfig {
         minSdkVersion 28
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -71,7 +71,7 @@ publishing {
 }
 
 dependencies {
-    implementation files('libs/spikesdk-release.aar')
+//    implementation files('libs/spikesdk-release.aar')
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
